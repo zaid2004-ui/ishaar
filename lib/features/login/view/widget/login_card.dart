@@ -10,13 +10,13 @@ import 'package:ishaar/l10n/app_localizations.dart';
 class LoginCard extends StatelessWidget {
   const LoginCard({
     super.key,
-    required this.emailControler,
+    required this.userNameControler,
     required this.passwordController,
     required this.onLogin,
   });
   final VoidCallback onLogin;
 
-  final TextEditingController emailControler;
+  final TextEditingController userNameControler;
   final TextEditingController passwordController;
 
   @override
@@ -56,7 +56,7 @@ class LoginCard extends StatelessWidget {
                 Text(
                   localizations.login,
                   style: GoogleFonts.greatVibes(
-                    fontSize: 48,
+                    fontSize: 20,
                     color: colorScheme.primary,
                   ),
                 ),
@@ -65,20 +65,10 @@ class LoginCard extends StatelessWidget {
 
                 // Email
                 CustomTextField(
-                  inputType: TextInputType.emailAddress,
+                  inputType: TextInputType.name,
 
                   label: localizations.useName,
-                  controller: emailControler,
-                  valedator: (v) => 'Enter a valid email',
-                ),
-                CustomTextField(
-                  inputType: TextInputType.emailAddress,
-
-                  label: localizations.emile,
-                  controller: emailControler,
-                  valedator: (v) => AppRegex.email.hasMatch(v?.trim() ?? '')
-                      ? null
-                      : 'Enter a valid email',
+                  controller: userNameControler,
                 ),
 
                 const SizedBox(height: 18),

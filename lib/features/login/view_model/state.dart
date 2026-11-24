@@ -1,17 +1,17 @@
+import 'package:ishaar/model/erorr/response_api_error.dart';
+
 abstract class LoginState {}
 
-class LoginInitial extends LoginState {}
+class LoginInitState extends LoginState {}
 
-class LoginLoading extends LoginState {}
+class LoginLoadingState extends LoginState {}
 
-class LoginSuccess extends LoginState {
-  final dynamic response;
-
-  LoginSuccess(this.response);
+class LoginErrorState extends LoginState {
+  final ResponseApiError responseApiError;
+  LoginErrorState({required this.responseApiError});
 }
 
-class LoginError extends LoginState {
-  final String message;
-
-  LoginError(this.message);
+class LoginSuccessState extends LoginState {
+  final String otpKey;
+  LoginSuccessState({required this.otpKey});
 }
