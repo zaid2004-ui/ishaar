@@ -1,0 +1,59 @@
+{
+    "@@locale": "ar",
+    "login": "تسجيل الدخول",
+    "@login": {
+        "description": "عنوان يظهر في شاشة تسجيل الدخول"
+    },
+    "email": "البريد الإلكتروني",
+    "@email": {
+        "description": "عنوان حقل إدخال البريد الإلكتروني"
+    },
+    "password": "كلمة المرور",
+    "@password": {
+        "description": "عنوان حقل إدخال كلمة المرور"
+    },
+    "welcome": "أهلاً وسهلاً",
+    "@welcome": {
+        "description": "رسالة ترحيب تظهر للمستخدم"
+    },
+    "beautyBeginsWithAFlower": "ابقَ على اطلاع بأخبار شركتك",
+    "@beautyBeginsWithAFlower": {
+        "description": "عنوان شاشة التعريف الأولى"
+    },
+    "discoverBouquets": "تابع آخر أخبار الشركة وإعلاناتها وتحديثاتها المهمة من مكان واحد.",
+    "@discoverBouquets": {
+        "description": "وصف شاشة التعريف الأولى"
+    },
+    "sameDayDelivery": "لا تفوّت أي تحديث مهم",
+    "@sameDayDelivery": {
+        "description": "عنوان شاشة التعريف الثانية"
+    },
+    "sameDayDeliverySubtitle": "استقبل الإشعارات فور صدورها وابقَ على اطلاع بكل ما يحدث داخل الشركة.",
+    "@sameDayDeliverySubtitle": {
+        "description": "وصف شاشة التعريف الثانية"
+    },
+    "next": "التالي",
+    "@next": {
+        "description": "نص زر الانتقال إلى شاشة التعريف التالية"
+    },
+    "skip": "تخطي",
+    "@skip": {
+        "description": "نص زر تخطي شاشات التعريف والانتقال إلى تسجيل الدخول"
+    },
+    "useName": "اسم المستخدم",
+    "@useName": {
+        "description": "عنوان حقل إدخال اسم المستخدم"
+    },
+    "emile": "البريد الإلكتروني",
+    "@emile": {
+        "description": "عنوان حقل إدخال البريد الإلكتروني"
+    },
+    "enterValidEmail": "أدخل بريداً إلكترونياً صحيحاً",
+    "@enterValidEmail": {
+        "description": "رسالة تحقق تظهر عندما يكون البريد الإلكتروني غير صالح"
+    },
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "@passwordRequired": {
+        "description": "رسالة تحقق تظهر عندما يكون حقل كلمة المرور فارغاً"
+    }
+}

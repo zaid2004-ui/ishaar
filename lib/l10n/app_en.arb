@@ -1,0 +1,59 @@
+{
+    "@@locale": "en",
+    "login": "Login",
+    "@login": {
+        "description": "Title displayed on the login screen"
+    },
+    "email": "Email",
+    "@email": {
+        "description": "Label for the email input field"
+    },
+    "password": "Password",
+    "@password": {
+        "description": "Label for the password input field"
+    },
+    "welcome": "Welcome",
+    "@welcome": {
+        "description": "Welcome message displayed to the user"
+    },
+    "beautyBeginsWithAFlower": "Stay Updated with Your Company",
+    "@beautyBeginsWithAFlower": {
+        "description": "Title displayed on the first onboarding screen"
+    },
+    "discoverBouquets": "Get the latest company news, announcements, and updates in one place.",
+    "@discoverBouquets": {
+        "description": "Subtitle displayed on the first onboarding screen"
+    },
+    "sameDayDelivery": "Never Miss an Important Update",
+    "@sameDayDelivery": {
+        "description": "Title displayed on the second onboarding screen"
+    },
+    "sameDayDeliverySubtitle": "Receive instant notifications and stay informed about everything happening in your company.",
+    "@sameDayDeliverySubtitle": {
+        "description": "Subtitle displayed on the second onboarding screen"
+    },
+    "next": "Next",
+    "@next": {
+        "description": "Button text used to navigate to the next onboarding screen"
+    },
+    "skip": "Skip",
+    "@skip": {
+        "description": "Button text used to skip onboarding and navigate to login"
+    },
+    "useName": "اسم المستخدم",
+    "@useName": {
+        "description": "عنوان حقل إدخال اسم المستخدم"
+    },
+    "emile": "البريد الإلكتروني",
+    "@emile": {
+        "description": "عنوان حقل إدخال البريد الإلكتروني"
+    },
+    "enterValidEmail": "أدخل بريداً إلكترونياً صحيحاً",
+    "@enterValidEmail": {
+        "description": "رسالة تحقق تظهر عندما يكون البريد الإلكتروني غير صالح"
+    },
+    "passwordRequired": "كلمة المرور مطلوبة",
+    "@passwordRequired": {
+        "description": "رسالة تحقق تظهر عندما يكون حقل كلمة المرور فارغاً"
+    }
+}

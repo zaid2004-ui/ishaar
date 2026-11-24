@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ishaar/core/routes/app_pages.dart';
+import 'package:ishaar/core/routes/app_routes.dart';
+import 'package:ishaar/core/utils/images/app_images.dart';
+import 'package:ishaar/features/splash/view_model/cubit.dart';
+import 'package:ishaar/features/splash/view_model/state.dart';
+import 'package:ishaar/l10n/app_localizations.dart';
+
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _fadeanimation;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 4),
+    );
+    _fadeanimation = Tween<double>(begin: 0.0, end: 1.0).animate(_controller);
+    _controller.forward();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (_) => SplashCubit()..goNextPage(),
+
+      child: BlocListener<SplashCubit, SplashState>(
+        listener: (context, state) {
+          if (state is SplashOnBoardPageState) {
+            AppRoutes.startNewRoute(AppPages.onBoardingScreen);
+          } else if (state is SplashLoginPageState) {
+            AppRoutes.startNewRoute(AppPages.loginSereen);
+          } else if (state is SplashHomePageState) {
+            // AppRoutes.startNewRoute(AppPages.mainScreen);
+          }
+        },
+        child: Scaffold(
+          backgroundColor: Theme.of(context).colorScheme.primary.withAlpha(150),
+          body: FadeTransition(
+            opacity: _fadeanimation,
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(AppImages.iconImage, width: 200, height: 200),
+                  Text(
+                    AppLocalizations.of(context)!.welcome,
+                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: Theme.of(context).colorScheme.onPrimary,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

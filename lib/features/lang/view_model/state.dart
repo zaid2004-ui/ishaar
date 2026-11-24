@@ -1,0 +1,1 @@
+enum LoclizationState { en, ar }
