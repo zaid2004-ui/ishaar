@@ -17,12 +17,15 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      cursorColor: Theme.of(context).colorScheme.onPrimary,
+
+      style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
       controller: controller,
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.all(10),
         border: const OutlineInputBorder(),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Theme.of(context).colorScheme.primary),
+          borderSide: BorderSide(color: Theme.of(context).colorScheme.tertiary),
         ),
         labelText: label,
       ),

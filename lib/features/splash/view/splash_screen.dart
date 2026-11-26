@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:ishaar/core/local/local_storage.dart';
 import 'package:ishaar/core/routes/app_pages.dart';
 import 'package:ishaar/core/routes/app_routes.dart';
 import 'package:ishaar/core/utils/images/app_images.dart';
@@ -38,17 +39,22 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final isLogin = LocalStorage.instens.isLogin;
+
     return BlocProvider(
       create: (_) => SplashCubit()..goNextPage(),
 
       child: BlocListener<SplashCubit, SplashState>(
-        listener: (context, state) {
+        listener: (context, state) async {
           if (state is SplashOnBoardPageState) {
             AppRoutes.startNewRoute(AppPages.onBoardingScreen);
           } else if (state is SplashLoginPageState) {
-            AppRoutes.startNewRoute(AppPages.loginSereen);
+            if (isLogin == true) {
+            } else {
+              AppRoutes.startNewRoute(AppPages.loginSereen);
+            }
           } else if (state is SplashHomePageState) {
-            // AppRoutes.startNewRoute(AppPages.mainScreen);
+            AppRoutes.startNewRoute(AppPages.mainScreen);
           }
         },
         child: Scaffold(

@@ -27,7 +27,7 @@ class LoginUsecase {
         ResponseApiError(
           success: false,
           message: _messageFromType(e.type),
-          error: e.message,
+          errorCode: e.message,
         ),
       );
     } catch (e) {
@@ -35,7 +35,7 @@ class LoginUsecase {
         ResponseApiError(
           success: false,
           message: 'Something went wrong. Please try again.',
-          error: e.toString(),
+          errorCode: e.toString(),
         ),
       );
     }

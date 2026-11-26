@@ -29,11 +29,11 @@ class Login extends StatelessWidget {
                 CustomLoading.hide(context);
                 SnackBarHelper.showError(
                   context,
-                  state.responseApiError.toString(),
+                  state.responseApiError.message!,
                 );
               } else if (state is LoginSuccessState) {
                 CustomLoading.hide(context);
-                AppRoutes.startNewRoute(AppPages.otpScreen);
+                AppRoutes.startNewRoute(AppPages.otpScreen, args: state.otpKey);
               }
             },
             child: Form(

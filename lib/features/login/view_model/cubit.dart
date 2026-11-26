@@ -25,7 +25,7 @@ class LoginCubit extends Cubit<LoginState> {
     final result = await loginRepo.login(
       request: RequestLogin(
         username: usernameController.text.trim(),
-        password: passwordController.text.trim(),
+        password: passwordController.text,
       ),
     );
     if (isClosed) return;

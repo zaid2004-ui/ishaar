@@ -27,7 +27,7 @@ class IshaarApp extends StatelessWidget {
           final languageCubit = context.watch<LocalizatoinCubit>();
 
           return MaterialApp(
-            title: 'Shoply App',
+            title: 'Ishaar',
             locale: languageCubit.locale,
 
             localizationsDelegates: [

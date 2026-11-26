@@ -19,11 +19,11 @@ class CustomButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         backgroundColor:
             backgroundColor ??
-            Theme.of(context).colorScheme.secondary.withValues(alpha: 0.8),
+            Theme.of(context).colorScheme.tertiary.withAlpha(500),
       ),
       child: Text(
         text,
-        style: TextStyle(color: Theme.of(context).colorScheme.onSurface),
+        style: TextStyle(color: Theme.of(context).colorScheme.onPrimary),
       ),
     );
   }

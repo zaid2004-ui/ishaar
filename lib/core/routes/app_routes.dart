@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ishaar/core/routes/app_pages.dart';
 import 'package:ishaar/features/login/view/login_sereen.dart';
+import 'package:ishaar/features/main/view/main_screen.dart';
 import 'package:ishaar/features/onboarding/view/onboarding_screen.dart';
 import 'package:ishaar/features/otp/view/otp_screen.dart';
 import 'package:ishaar/features/splash/view/splash_screen.dart';
@@ -26,13 +27,20 @@ class AppRoutes {
       case AppPages.otpScreen:
         return MaterialPageRoute(
           builder: (context) {
-            return OtpScreen();
+            final otpKey = settings.arguments as String;
+            return OtpScreen(otpKey: otpKey);
           },
         );
       case AppPages.loginSereen:
         return MaterialPageRoute(
           builder: (context) {
             return Login();
+          },
+        );
+      case AppPages.mainScreen:
+        return MaterialPageRoute(
+          builder: (context) {
+            return MainScreen();
           },
         );
 

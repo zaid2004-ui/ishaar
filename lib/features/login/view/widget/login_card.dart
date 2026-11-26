@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:ishaar/core/regex/app_regex.dart';
 import 'package:ishaar/core/utils/images/app_images.dart';
 import 'package:ishaar/core/utils/widgets/custom_button.dart';
 import 'package:ishaar/core/utils/widgets/custom_password_field.dart';

@@ -10,12 +10,5 @@ ResponseApiError _$ResponseApiErrorFromJson(Map<String, dynamic> json) =>
     ResponseApiError(
       success: json['success'] as bool?,
       message: json['message'] as String?,
-      error: json['error'] as String?,
+      errorCode: json['errorCode'] as String?,
     );
-
-Map<String, dynamic> _$ResponseApiErrorToJson(ResponseApiError instance) =>
-    <String, dynamic>{
-      'success': instance.success,
-      'message': instance.message,
-      'error': instance.error,
-    };

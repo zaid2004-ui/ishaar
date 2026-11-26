@@ -12,10 +12,3 @@ ResponseLogin _$ResponseLoginFromJson(Map<String, dynamic> json) =>
       message: json['message'] as String?,
       otpKey: json['otp_key'] as String?,
     );
-
-Map<String, dynamic> _$ResponseLoginToJson(ResponseLogin instance) =>
-    <String, dynamic>{
-      'success': instance.success,
-      'message': instance.message,
-      'otp_key': instance.otpKey,
-    };

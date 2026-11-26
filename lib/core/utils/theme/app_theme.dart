@@ -10,6 +10,7 @@ class AppTheme {
     textTheme: AppTypography.getTextTheme(false),
     colorScheme: ColorScheme.fromSwatch(brightness: Brightness.light).copyWith(
       primary: AppColors.primary60,
+      tertiary: AppColors.accent50,
       secondary: AppColors.neutral70,
       surface: AppColors.primary10,
       onPrimary: Colors.white,
@@ -71,7 +72,8 @@ class AppTheme {
     colorScheme: ColorScheme.fromSwatch(brightness: Brightness.dark).copyWith(
       primary: AppColors.primary90, // ✅ أزرق غامق
       secondary: AppColors.neutral30,
-      surface: const Color.fromARGB(255, 82, 114, 147),
+      tertiary: AppColors.accent40,
+      surface: AppColors.primary10.withAlpha(700),
       onPrimary: Colors.white,
       onSurface: AppColors.darkNeutral70,
     ),
