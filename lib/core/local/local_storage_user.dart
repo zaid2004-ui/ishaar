@@ -12,4 +12,12 @@ class LocalStorageUser {
     await _storage.write(key: 'token', value: token);
     await _storage.write(key: 'refreshToken', value: refreshToken);
   }
+
+  Future<String?> getTokens() => _storage.read(key: 'token');
+  Future<String?> getRefreshToken() => _storage.read(key: 'refreshToken');
+  Future<void> clear() async {
+    await _storage.delete(key: 'token');
+
+    await _storage.delete(key: 'refreshToken');
+  }
 }
